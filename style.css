@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --gradient-one: Linear-gradient(135deg, hsl(0, 0%, 100%) hsl(0, 100%, 98%));
+  --gradient-two: Linear-gradient(
+    135deg,
+    from hsl(0, 80%, 86%),
+    to hsl(0, 74%, 74%)
+  );
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background: var(--gradient-one);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/*Logo styling*/
+
+.logo {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 100px;
+}
+
+/*Hero-image styling*/
+
+.hero-image {
+  width: 100%;
+}
+
+/*Hero-image styling*/
+
+main {
+  width: 100%;
+}
+
+/*Hero-main styling*/
+
+h1 {
+  text-transform: uppercase;
+  padding: 20px 0;
+  letter-spacing: 5px;
+  text-align: center;
+  color: var(--Dark-Grayish-Red);
+}
+
+span {
+  font-weight: 300;
+  color: var(--Desaturated-Red);
+}
+
+p {
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--Desaturated-Red);
+}
+
+/*form styling*/
+
+form {
+  margin-top: 2em;
+  width: 100%;
+  position: relative;
+}
+
+form input {
+  border-radius: 50px;
+  height: 2.5rem;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--Desaturated-Red);
+  color: var(--Desaturated-Red);
+}
+
+form input:focus {
+  border: 1px solid red;
+}
+
+.form-control.error input {
+  border-color: brown;
+}
+
+.form-control.success input {
+  border-color: var(--Desaturated-Red); /*change later*/
+}
+
+button {
+  position: absolute;
+  width: 3.2rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #f8bfbf,
+    #f6b2b2,
+    #f4a6a5,
+    #f19999,
+    #ee8c8c
+  );
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button img {
+  width: 15%;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+/*Javascript class*/
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.error small {
+  color: var(--Desaturated-Red);
+  visibility: visible;
+  margin-top: 10px;
+}
+
+.logoContainer {
+  display: none;
+}
+
+.deskopImage {
+  display: none;
+}
+
+/*Media Query*/
+
+@media (min-width: 760px) {
+  .deskopContainer {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    min-height: 100%;
+  }
+
+  .deskopImage {
+    display: block;
+    width: 40%;
+    height: 100vh;
+    background-image: url(images/hero-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .deskopImage img {
+    width: 100%;
+  }
+
+  .logoContainer {
+    display: block;
+    margin-top: 2rem;
+  }
+  .logoContainer img {
+    width: 25%;
+  }
+  header {
+    display: none;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  main {
+    width: 60%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 63rem;
+    height: 100vh;
+  }
+
+  .wrapper {
+    width: 77%;
+    margin: auto;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+    width: 50%;
+    letter-spacing: 6px;
+  }
+
+  span {
+    letter-spacing: normal;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 4em;
+    width: 65%;
+  }
+
+  footer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
